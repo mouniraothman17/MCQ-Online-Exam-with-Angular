@@ -1,0 +1,74 @@
+
+.home-container {
+  margin-top: 120px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #f0f4f8, #dfe9f3);
+  padding: 50px;
+  border-radius: 16px;
+
+}
+
+.welcome-card {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.welcome-card h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center !important;
+
+}
+.text-container span{
+  color: #f44336;
+  font-weight: 600;
+}
+.text-container{
+  margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.welcome-card p {
+  color: #666;
+  font-size: 16px;
+  font-weight: 600;
+  width: 70%;
+
+}
+
+.exam-image {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+}
+
+.start-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition:  0.3s ease;
+  margin-top: 20px;
+}
+
+.start-btn:hover {
+  background-color: #0056b3;
+}

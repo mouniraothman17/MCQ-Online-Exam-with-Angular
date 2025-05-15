@@ -1,0 +1,14 @@
+<div class="home-container">
+  <div class="welcome-card">
+   <div class="text-container">
+    <h1>مرحبًا بك في منصة الاختبارات   <span>< فاينال > </span> </h1>
+    <p *ngIf="userRole == 'doctor' ">أنشئ الاختبارات و وفر وقتك و جهدك في الاختبارات الورقية مع منصتنا الالكترونية.</p>
+    <p *ngIf="userRole == 'students' "> اختبر معلوماتك، وتقدم بثقة نحو النجاح .</p>
+    <a  [routerLink]="userRole === 'doctor' ? '/new-exam' : '/subjects'"><button class="start-btn">ابدأ الآن</button></a>
+   </div>
+   <div class="image-container">
+    <img *ngIf="userRole == 'doctor' " src="/assets/images/doctor-home.jpg" alt="امتحانات" class="exam-image" />
+    <img *ngIf="userRole == 'students' " src="/assets/images/students-home.jpg" alt="امتحانات" class="exam-image w-75" />
+   </div>
+  </div>
+</div>

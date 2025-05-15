@@ -1,0 +1,107 @@
+<div class="examBox">
+  <div class="examhead text-center"><h2>اختبار {{ subject?.name }}</h2></div>
+
+  <div class="quizBox" *ngFor="let item of subject?.questions; let index = index">
+    <div *ngIf="editIndex !== index">
+      <strong><span class="text-danger">سؤال {{ 1 + index }}</span> . {{ item.question }}</strong>
+    </div>
+    <div *ngIf="editIndex === index && user?.role == 'doctor'">
+      <input class="form-control mb-2" [(ngModel)]="item.question" placeholder="السؤال" />
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-6 col-sm-12">
+        <ng-container *ngIf="editIndex !== index">
+          <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam"
+            (change)="getAnswer($event)" name="{{ index }}" value="{{ item.answer1 }}" color="warn"></mat-radio-button>
+          <label
+            [ngClass]="{
+              'correct-answer': user?.role == 'doctor' && item.answer1 === item.correctAnswer,
+              'correct-answer-student': showResult && item.answer1 === item.correctAnswer,
+              'wrong-answer': user?.role == 'students' && showResult && item.answer1 === item.studentAnswer && item.studentAnswer !== item.correctAnswer
+            }">A. {{ item.answer1 }}</label>
+        </ng-container>
+
+        <div *ngIf="editIndex === index && user?.role == 'doctor'">
+          <input class="form-control mb-2" [(ngModel)]="item.answer1" placeholder="الإجابة A" />
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <ng-container *ngIf="editIndex !== index">
+          <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam"
+            (change)="getAnswer($event)" name="{{ index }}" value="{{ item.answer2 }}" color="warn"></mat-radio-button>
+          <label
+            [ngClass]="{
+              'correct-answer': user?.role == 'doctor' && item.answer2 === item.correctAnswer,
+              'correct-answer-student': showResult && item.answer2 === item.correctAnswer,
+              'wrong-answer': user?.role == 'students' && showResult && item.answer2 === item.studentAnswer && item.studentAnswer !== item.correctAnswer
+            }">B. {{ item.answer2 }}</label>
+        </ng-container>
+
+        <div *ngIf="editIndex === index && user?.role == 'doctor'">
+          <input class="form-control mb-2" [(ngModel)]="item.answer2" placeholder="الإجابة B" />
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <ng-container *ngIf="editIndex !== index">
+          <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam"
+            (change)="getAnswer($event)" name="{{ index }}" value="{{ item.answer3 }}" color="warn"></mat-radio-button>
+          <label
+            [ngClass]="{
+              'correct-answer': user?.role == 'doctor' && item.answer3 === item.correctAnswer,
+              'correct-answer-student': showResult && item.answer3 === item.correctAnswer,
+              'wrong-answer': user?.role == 'students' && showResult && item.answer3 === item.studentAnswer && item.studentAnswer !== item.correctAnswer
+            }">C. {{ item.answer3 }}</label>
+        </ng-container>
+
+        <div *ngIf="editIndex === index && user?.role == 'doctor'">
+          <input class="form-control mb-2" [(ngModel)]="item.answer3" placeholder="الإجابة C" />
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <ng-container *ngIf="editIndex !== index">
+          <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam"
+            (change)="getAnswer($event)" name="{{ index }}" value="{{ item.answer4 }}" color="warn"></mat-radio-button>
+          <label
+            [ngClass]="{
+              'correct-answer': user?.role == 'doctor' && item.answer4 === item.correctAnswer,
+              'correct-answer-student': showResult && item.answer4 === item.correctAnswer,
+              'wrong-answer': user?.role == 'students' && showResult && item.answer4 === item.studentAnswer && item.studentAnswer !== item.correctAnswer
+            }">D. {{ item.answer4 }}</label>
+        </ng-container>
+
+        <div *ngIf="editIndex === index && user?.role == 'doctor'">
+          <input class="form-control mb-2" [(ngModel)]="item.answer4" placeholder="الإجابة D" />
+        </div>
+      </div>
+
+      <div class="col-12 mt-2" *ngIf="editIndex === index && user?.role == 'doctor'">
+        <label class="fw-bold">الإجابة الصحيحة:</label>
+        <select class="form-control" [(ngModel)]="item.correctAnswer">
+          <option [value]="item.answer1">A</option>
+          <option [value]="item.answer2">B</option>
+          <option [value]="item.answer3">C</option>
+          <option [value]="item.answer4">D</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="text-start mt-2" *ngIf="user?.role == 'doctor'">
+      <button *ngIf="editIndex !== index" class="btn btn-danger mx-1" (click)="delete(index)">حذف</button>
+      <button *ngIf="editIndex !== index" class="btn btn-warning mx-1" (click)="edit(index)">تعديل</button>
+      <button *ngIf="editIndex === index" class="btn btn-success mx-1" (click)="save(index)">حفظ</button>
+    </div>
+
+    <hr>
+  </div>
+
+  <div class="text-center my-5" *ngIf="user?.role == 'students'">
+    <span *ngIf="showResult || !validExam" class="correct-answer2">
+      نتيجتك هي: {{ total }} / {{ subject?.questions.length }}
+    </span>
+    <button *ngIf="!showResult && validExam" class="btn btn-success px-5 fs-5" (click)="getResult()">النتيجة</button>
+  </div>
+</div>
