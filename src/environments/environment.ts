@@ -4,7 +4,7 @@
 
 export const environment = {
   baseApi: 'https://satin-nifty-game.glitch.me/',
-  production: false
+  production: true
 };
 
 /*
