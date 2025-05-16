@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  baseApi: 'https://your-glitch-project-name.glitch.me',
+  baseApi: 'https://satin-nifty-game.glitch.me/',
   production: false
 };
 
