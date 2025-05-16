@@ -1,0 +1,262 @@
+{
+  "students": [
+    {
+      "username": "منيرة عثمان",
+      "email": "mouniraoth456@gmail.com",
+      "password": "1234",
+      "subjects": [
+        {
+          "name": "الرياضيات",
+          "id": "math101",
+          "degree": 6,
+          "questionLength": 8
+        }
+      ],
+      "id": "ed90"
+    }
+  ],
+  "doctor": [
+    {
+      "username": "Admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "id": "ed90"
+    }
+  ],
+  "subjects": [
+    {
+      "name": "الرياضيات",
+      "questions": [
+        {
+          "question": "5 + 3",
+          "answer1": "6",
+          "answer2": "8",
+          "answer3": "9",
+          "answer4": "7",
+          "correctAnswer": "8",
+          "studentAnswer": "6"
+        },
+        {
+          "question": "12 - 4",
+          "answer1": "9",
+          "answer2": "6",
+          "answer3": "8",
+          "answer4": "10",
+          "correctAnswer": "8",
+          "studentAnswer": "8"
+        },
+        {
+          "question": "7 × 2",
+          "answer1": "14",
+          "answer2": "12",
+          "answer3": "16",
+          "answer4": "10",
+          "correctAnswer": "14",
+          "studentAnswer": "14"
+        },
+        {
+          "question": "16 ÷ 4",
+          "answer1": "5",
+          "answer2": "4",
+          "answer3": "3",
+          "answer4": "6",
+          "correctAnswer": "4",
+          "studentAnswer": "3"
+        },
+        {
+          "question": "9 + 6",
+          "answer1": "14",
+          "answer2": "15",
+          "answer3": "16",
+          "answer4": "13",
+          "correctAnswer": "15",
+          "studentAnswer": "15"
+        },
+        {
+          "question": "10 × 0",
+          "answer1": "1",
+          "answer2": "0",
+          "answer3": "10",
+          "answer4": "100",
+          "correctAnswer": "0",
+          "studentAnswer": "0"
+        },
+        {
+          "question": "25 ÷ 5",
+          "answer1": "4",
+          "answer2": "6",
+          "answer3": "5",
+          "answer4": "3",
+          "correctAnswer": "5",
+          "studentAnswer": "3"
+        },
+        {
+          "question": "3 + 3 × 2",
+          "answer1": "12",
+          "answer2": "9",
+          "answer3": "8",
+          "answer4": "6",
+          "correctAnswer": "9",
+          "studentAnswer": "12"
+        }
+      ],
+      "id": "math101"
+    },
+    {
+      "id": "eng101",
+      "name": "English",
+      "questions": [
+        {
+          "question": "? What ---- your name",
+          "answer1": "am",
+          "answer2": "is",
+          "answer3": "are",
+          "answer4": "be",
+          "correctAnswer": "is"
+        },
+        {
+          "question": "They ---- playing football",
+          "answer1": "is",
+          "answer2": "was",
+          "answer3": "are",
+          "answer4": "am",
+          "correctAnswer": "are"
+        },
+        {
+          "question": "This is ---- apple",
+          "answer1": "an",
+          "answer2": "a",
+          "answer3": "the",
+          "answer4": "one",
+          "correctAnswer": "an"
+        },
+        {
+          "question": "He ---- to school every day",
+          "answer1": "go",
+          "answer2": "goes",
+          "answer3": "went",
+          "answer4": "going",
+          "correctAnswer": "goes"
+        },
+        {
+          "question": "I ---- happy today",
+          "answer1": "is",
+          "answer2": "are",
+          "answer3": "am",
+          "answer4": "be",
+          "correctAnswer": "am"
+        },
+        {
+          "question": "Cats ---- milk",
+          "answer1": "like",
+          "answer2": "likes",
+          "answer3": "liking",
+          "answer4": "liked",
+          "correctAnswer": "like"
+        },
+        {
+          "question": "She ---- a teacher",
+          "answer1": "am",
+          "answer2": "is",
+          "answer3": "are",
+          "answer4": "be",
+          "correctAnswer": "is"
+        },
+        {
+          "question": "? How ---- you",
+          "answer1": "am",
+          "answer2": "are",
+          "answer3": "is",
+          "answer4": "do",
+          "correctAnswer": "are"
+        }
+      ]
+    },
+    {
+      "name": "اللغة العربية",
+      "questions": [
+        {
+          "question": "ما ضد كلمة (سعيد)؟",
+          "answer1": "فرح",
+          "answer2": "مسرور",
+          "answer3": "حزين",
+          "answer4": "مبتهج",
+          "correctAnswer": "حزين",
+          "studentAnswer": "حزين"
+        },
+        {
+          "question": "الجملة الاسمية تبدأ بـ؟",
+          "answer1": "فعل",
+          "answer2": "اسم",
+          "answer3": "حرف",
+          "answer4": "أداة نفي",
+          "correctAnswer": "اسم",
+          "studentAnswer": "اسم"
+        },
+        {
+          "question": "كلمة (يكتب) هي؟",
+          "answer1": "اسم",
+          "answer2": "فعل ماضٍ",
+          "answer3": "فعل مضارع",
+          "answer4": "حرف",
+          "correctAnswer": "فعل مضارع",
+          "studentAnswer": "فعل مضارع"
+        },
+        {
+          "question": "كلمة (في) هي؟",
+          "answer1": "فعل",
+          "answer2": "اسم",
+          "answer3": "حرف جر",
+          "answer4": "صفة",
+          "correctAnswer": "حرف جر",
+          "studentAnswer": "حرف جر"
+        },
+        {
+          "question": "مرادف كلمة (سريع)؟",
+          "answer1": "بطيء",
+          "answer2": "عاجل",
+          "answer3": "هادئ",
+          "answer4": "كبير",
+          "correctAnswer": "عاجل",
+          "studentAnswer": "عاجل"
+        },
+        {
+          "question": "المفعول به هو؟",
+          "answer1": "من قام بالفعل",
+          "answer2": "مكان الحدث",
+          "answer3": "من وقع عليه الفعل",
+          "answer4": "زمان الفعل",
+          "correctAnswer": "من وقع عليه الفعل",
+          "studentAnswer": "من وقع عليه الفعل"
+        },
+        {
+          "question": "الجملة: (أكل الولد التفاحة) - المبتدأ هو؟",
+          "answer1": "الولد",
+          "answer2": "أكل",
+          "answer3": "التفاحة",
+          "answer4": "لا يوجد",
+          "correctAnswer": "الولد",
+          "studentAnswer": "لا يوجد"
+        },
+        {
+          "question": "نوع اللام في (للمعلم فضل كبير)؟",
+          "answer1": "لام أمر",
+          "answer2": "لام تعليل",
+          "answer3": "لام جر",
+          "answer4": "لام ملك",
+          "correctAnswer": "لام جر",
+          "studentAnswer": "لام جر"
+        }
+      ],
+      "id": "arab101"
+    }
+  ],
+  "login": [
+    {
+      "username": "Admin",
+      "role": "doctor",
+      "userId": "ed90",
+      "id": "ed90"
+    }
+  ]
+}
